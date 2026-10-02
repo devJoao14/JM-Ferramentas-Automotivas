@@ -16,6 +16,15 @@ body {
     font-family: 'Rajdhani', sans-serif;
 }
 
+.texto {
+    width: 100%;
+    max-width: 800px;
+
+    padding: 40px 25px;
+
+    text-align: left bottom ;
+}
+
 .perfil {
     width: 100%;
     max-width: 500px;

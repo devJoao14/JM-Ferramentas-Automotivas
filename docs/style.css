@@ -11,7 +11,12 @@ body {
     justify-content: center;
     align-items: center;
 
-    background: radial-gradient(rgb(14, 57, 114),rgb(2, 120, 255));
+    padding: 20px;
+
+    background: radial-gradient(
+        rgb(14, 57, 114),
+        rgb(2, 120, 255)
+    );
 
     font-family: 'Rajdhani', sans-serif;
 }
@@ -25,7 +30,6 @@ body {
     text-align: center;
 }
 
-
 .foto-container {
     width: 130px;
     height: 130px;
@@ -33,14 +37,13 @@ body {
     margin: 0 auto 20px;
 
     border-radius: 50%;
-
     overflow: hidden;
 
     border: 4px solid #ffffff;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-
     background: #ddd;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .foto-container img {
@@ -51,24 +54,31 @@ body {
 }
 
 .perfil h1 {
-    font-size: 30px;
+    margin-bottom: 8px;
+
     color: #ffffff;
 
-    margin-bottom: 8px;
-        font-family: 'Archivo Black', sans-serif;
+    font-family: 'Archivo Black', sans-serif;
+
+    font-size: 30px;
+    line-height: 1.1;
 }
 
 .descricao {
-    color: #d1d1d1;
-    font-size: 20px;
-
     margin-bottom: 30px;
-}
 
+    color: #d1d1d1;
+
+    font-size: 20px;
+    line-height: 1.3;
+}
 
 .lista-contato {
     display: flex;
     flex-direction: column;
+
+    width: 100%;
+
     gap: 12px;
 }
 
@@ -77,6 +87,7 @@ body {
     align-items: center;
 
     width: 100%;
+    min-width: 0;
 
     padding: 16px 18px;
 
@@ -84,9 +95,8 @@ body {
 
     border-radius: 14px;
 
-    text-decoration: none;
-
     color: inherit;
+    text-decoration: none;
 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 
@@ -98,7 +108,6 @@ body {
 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
 }
-
 
 .icone {
     width: 45px;
@@ -124,32 +133,143 @@ body {
 
 .informacao {
     flex: 1;
+    min-width: 0;
+
+    padding: 0 10px;
 
     text-align: center;
-
-    padding-right: 45px;
 }
 
 .informacao span {
     display: block;
 
-    font-size: 12px;
+    margin-bottom: 4px;
 
     color: #999;
 
-    margin-bottom: 4px;
+    font-size: 12px;
 
     text-transform: uppercase;
-
     letter-spacing: 0.5px;
 }
 
 .informacao strong {
     display: block;
 
-    font-size: 15px;
-
     color: #222;
 
+    font-size: 15px;
     font-weight: 500;
+
+    line-height: 1.25;
+
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        align-items: flex-start;
+
+        padding: 10px;
+    }
+
+    .perfil {
+        max-width: 100%;
+
+        padding: 30px 10px;
+    }
+
+    .foto-container {
+        width: 110px;
+        height: 110px;
+
+        margin-bottom: 16px;
+    }
+
+    .perfil h1 {
+        font-size: 25px;
+    }
+
+    .descricao {
+        margin-bottom: 25px;
+
+        font-size: 17px;
+    }
+
+    .lista-contato {
+        gap: 10px;
+    }
+
+    .item-contato {
+        padding: 14px 12px;
+    }
+
+    .icone {
+        width: 42px;
+        height: 42px;
+    }
+
+    .icone img {
+        width: 23px;
+        height: 23px;
+    }
+
+    .informacao {
+        padding: 0 8px;
+    }
+
+    .informacao span {
+        font-size: 11px;
+    }
+
+    .informacao strong {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    body {
+        padding: 5px;
+    }
+
+    .perfil {
+        padding: 25px 5px;
+    }
+
+    .foto-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .perfil h1 {
+        font-size: 23px;
+    }
+
+    .descricao {
+        font-size: 16px;
+    }
+
+    .item-contato {
+        padding: 12px 10px;
+    }
+
+    .icone {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icone img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .informacao {
+        padding: 0 6px;
+    }
+
+    .informacao strong {
+        font-size: 13px;
+    }
 }
